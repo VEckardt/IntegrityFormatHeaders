@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="510.0000999999975" prefWidth="697.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="formatheaders.FormatHeadersController">
+  <children>
+    <VBox prefHeight="383.0" prefWidth="570.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="26.0">
+      <children>
+        <VBox prefHeight="-1.0" prefWidth="100.0">
+          <children>
+            <Label text="This utility will reformat your Integrity Document Headers and align them " VBox.vgrow="ALWAYS">
+              <VBox.margin>
+                <Insets bottom="3.0" top="10.0" />
+              </VBox.margin>
+            </Label>
+            <Label text="according to the selected section level.">
+              <VBox.margin>
+                <Insets bottom="8.0" />
+              </VBox.margin>
+            </Label>
+            <HBox prefHeight="29.0" prefWidth="641.0">
+              <children>
+                <Pane prefHeight="-1.0" prefWidth="96.0">
+                  <children>
+                    <Label text="Document:" />
+                  </children>
+                </Pane>
+                <VBox prefHeight="29.0" prefWidth="545.0">
+                  <children>
+                    <Label fx:id="lCurrentDoc" text="currentDoc" />
+                  </children>
+                </VBox>
+              </children>
+            </HBox>
+            <HBox prefHeight="52.0" prefWidth="641.0">
+              <children>
+                <Pane prefHeight="52.0" prefWidth="96.0">
+                  <children>
+                    <Label text="Attention: ">
+                      <font>
+                        <Font name="System Bold" size="16.0" />
+                      </font>
+                    </Label>
+                  </children>
+                </Pane>
+                <VBox prefHeight="52.0" prefWidth="545.0">
+                  <children>
+                    <Label prefWidth="506.0" text="All non-standard formatting, such as colors, leading or trailing blanks, " />
+                    <Label text="alignment, indentation, images and tables etc., will be removed too." />
+                  </children>
+                </VBox>
+              </children>
+            </HBox>
+            <CheckBox disable="true" mnemonicParsing="false" selected="true" text="Replace Line Breaks with Spaces">
+              <VBox.margin>
+                <Insets bottom="5.0" left="5.0" top="8.0" />
+              </VBox.margin>
+            </CheckBox>
+            <CheckBox fx:id="cbFormatWithBold" disable="false" mnemonicParsing="false" text="Format with bold only" visible="false">
+              <VBox.margin>
+                <Insets left="5.0" />
+              </VBox.margin>
+            </CheckBox>
+          </children>
+          <VBox.margin>
+            <Insets />
+          </VBox.margin>
+        </VBox>
+        <HBox prefHeight="51.5" prefWidth="570.0">
+          <children>
+            <Pane prefHeight="200.0" prefWidth="200.0" />
+            <Button fx:id="button" maxWidth="100.0" minWidth="100.0" onAction="#handleButtonAction" prefWidth="100.0" text="Cancel" />
+            <Pane maxWidth="50.0" minWidth="50.0" prefHeight="200.0" prefWidth="50.0" HBox.hgrow="NEVER" />
+            <Button id="button" maxWidth="100.0" minWidth="100.0" onAction="#bFormatPreview" prefWidth="100.0" text="Preview" />
+            <Pane maxWidth="50.0" minWidth="50.0" prefHeight="200.0" prefWidth="50.0" HBox.hgrow="NEVER" />
+            <Button id="button" maxWidth="100.0" minWidth="100.0" onAction="#bFormat" prefWidth="100.0" text="Format" />
+            <Pane prefHeight="200.0" prefWidth="200.0" />
+          </children>
+          <padding>
+            <Insets bottom="10.0" top="10.0" />
+          </padding>
+        </HBox>
+      </children>
+    </VBox>
+    <TextArea fx:id="logArea" prefHeight="170.00009999999747" prefWidth="641.0" wrapText="true" AnchorPane.bottomAnchor="38.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="28.0" AnchorPane.topAnchor="302.0" />
+    <ProgressBar fx:id="progressBar" maxHeight="14.0" prefWidth="200.0" progress="0.0" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="28.0" />
+  </children>
+</AnchorPane>
