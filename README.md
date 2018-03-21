@@ -5,7 +5,7 @@ This utility allows you to clear any formatting from Headings and put in instead
 ## Purpose
 With this custom form you can format an Integrity document in that way, that each heading in the document will be set to the correct heading level.
 
-![FormatHeaders](doc/FormatHeaders.PNG)
+![FormatHeaders](doc/IntegrityFormatHeaders.PNG)
 
 ## Use Cases
 - Set the correct Heading Level for nodes of category "Heading"
